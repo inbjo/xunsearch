@@ -208,6 +208,41 @@ class XunsearchService extends \XS implements XunsearchInterface
 
 
     /**
+     * 开始重建索引
+     * User: ZeMing Shao
+     * Email: szm19920426@gmail.com
+     * @return \XSIndex
+     */
+    public function beginRebuild()
+    {
+        return $this->getIndex()->beginRebuild();
+    }
+
+
+    /**
+     * 结束重建索引
+     * User: ZeMing Shao
+     * Email: szm19920426@gmail.com
+     * @return \XSIndex
+     */
+    public function endRebuild()
+    {
+        return $this->getIndex()->endRebuild();
+    }
+
+
+    /**
+     * 停止重建索引
+     * User: ZeMing Shao
+     * Email: szm19920426@gmail.com
+     * @return \XSIndex
+     */
+    public function stopRebuild()
+    {
+        return $this->getIndex()->stopRebuild();
+    }
+
+    /**
      * User: ZeMing Shao
      * Email: szm19920426@gmail.com
      * @param int $limit

@@ -405,7 +405,6 @@ class XS extends XSComponent
 
     public function getSearch()
     {
-        if ($this->_search === null) {
             $conns = array();
             if (!isset($this->_config['server.search'])) {
                 $conns[] = 8384;
@@ -431,8 +430,7 @@ class XS extends XSComponent
                     }
                 }
             }
-        }
-        return $this->_search;
+
     }
 
     public function getScwsServer()
@@ -543,6 +541,9 @@ class XS extends XSComponent
     {
         $cache = false;
         $cache_write = '';
+        $this->_index = null;  //  加载不同的库时需要重置_index   chenpan
+        $this->_search = null;  //  加载不同的库时需要重置_search   chenpan
+
         if (is_array($file)) {
             $data = $file;
             $file = substr(md5(json_encode($file)), 8, 8) . '.ini';

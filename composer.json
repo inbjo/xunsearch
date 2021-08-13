@@ -1,5 +1,5 @@
 {
-    "name": "shaozeming/xunsearch",
+    "name": "flex/xunsearch",
     "description": "xunsearch【讯搜全文索引】composer package",
     "require-dev": {
         "phpunit/phpunit": "^6.3",
