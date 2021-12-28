@@ -59,7 +59,7 @@ class XunsearchService extends \XS implements XunsearchInterface
      */
     public function search($string)
     {
-        if ($string !='') {
+        if ($string =='') {
             throw new \Exception('请输入搜索字符');
         }
         $count = $total = $search_cost = 0;
