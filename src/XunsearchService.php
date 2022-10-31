@@ -186,7 +186,7 @@ class XunsearchService extends \XS implements XunsearchInterface
         }
 
         $this->getIndex()->del($ids);
-        if ($this->config['flushIndex']) {
+        if ($this->flush_index) {
             $this->getIndex()->flushIndex();
         }
         return $this->getIndex();
