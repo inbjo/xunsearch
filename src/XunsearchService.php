@@ -68,7 +68,7 @@ class XunsearchService extends \XS implements XunsearchInterface
         $search = $this->getSearch();
 
         //热门词汇
-        $hot = $search->getHotQuery();
+        //$hot = $search->getHotQuery();
 
         // fuzzy search 模糊搜索
         $search->setFuzzy($this->fuzzy);
